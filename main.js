@@ -21,3 +21,5 @@ loadText();
 const sheet = new CSSStyleSheet();
 sheet.replaceSync(text);
 document.adoptedStyleSheets.push(sheet);
+
+alert("hi");
