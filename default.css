@@ -1,0 +1,195 @@
+/*https://gist.github.com/ambidexterich/34828a904dd97dd2a345*/
+
+:root {
+	/*optimal line lengths*/
+	--ll-print: 66ch;
+	--ll-screen: 55ch;
+	--ll-apporximation: 9.5cm;
+
+	/*physical dimensionss*/
+	--a4-long: 297mm;
+	--a4-short: 210mm;
+	--default-margin-int: 1in;
+	--default-margin: 2.5cm;
+	--cc-long: 3.375in;
+	--cc-short: 2.125in;
+	--cc-radius-min: 0.1125in;
+	--cc-radius-optimal: 0.125in;
+	--cc-radius-max: 0.1875in;
+	--index-card-long: 5in;
+	--index-card-short: 3in;
+	--visitenkarteUS-long: 3.5in;
+	--visitenkarteUS-short: 2in;
+	--visitenkarteEU-long: 85mm;
+	--visitenkarteEU-short: 55mm;
+	--portrait-h: 4.5cm;
+	--portrait-w: 3.5cm;
+	--unterschriftenfeld-min-länge: 75mm;
+	--unterschriftenfeld-min-höhe: 10mm;
+	/*	--textwidth-og: 390pt;*/
+	--paragraph-content-lh-accessibility: 1.5;
+
+	/*unterschriftenfeld min*/
+
+	/*text sizes*/
+	--tex-pt: calc(1 / 72.27in);
+
+	--min-x-height: 1.2mm;
+	--extra-min-x-height: 0.9mm;
+	--magstep: 1.2; /*minor third*/
+	--halfstep: sqrt(var(--magstep));
+	--fs-tiny: 6pt;
+	--fs-min: var(--fs-tiy);
+	--fs-script: 8pt;
+	--fs-footnote: 10pt;
+	--fs-small: calc(var(--fs-normal) / var(--halfstep));
+	--fs-normal: 12pt;
+	--fs-normal-serif: var(--fs-normal);
+	--fs-normal-sans: 11pt;
+	--fs-large: calc(var(--fs-normal) * pow(var(--magstep), 1));
+	--fs-Large: calc(var(--fs-normal) * pow(var(--magstep), 2));
+	--fs-LARGE: calc(var(--fs-normal) * pow(var(--magstep), 3));
+	--fs-huge: calc(var(--fs-normal) * pow(var(--magstep), 4));
+	--fs-Huge: calc(var(--fs-normal) * pow(var(--magstep), 5));
+	--fs-title_h1: 2.2rem;
+	--fs-heading_h2: 1.5rem;
+	--fs-sub-heading_h3: 1.25rem;
+	--fs-sub-sub-heading_h4: 1.125rem;
+	--fs-handle_h5: 1.025rem;
+	--fs-sub-handle_h6: 1rem;
+
+	/* colors */
+	--bg: hsl(0, 0%, 95%);
+	--nm555: oklch(0.97 0.37 136);
+	--content: black;
+
+	--content-mild: hsl(0, 0%, 50%);
+	--day-content-mild: ;
+	--day-content: ;
+	--night-content-mild: hsl;
+	--night-content: ;
+	--night-backdrop: ;
+	--day-backdrop: ;
+	--backdrop: ;
+
+	/* line heights */
+	--lh-text: 1.2; /* like TeX’s ~1.2 for body text */
+	--lh-tight: 1.15; /* for mid headings */
+	--lh-tighter: 1.12; /* big headings */
+	--lh-tiniest: 1.1; /* tiny/scriptsize to avoid airy lines */
+
+	--listsep-alt: 0.1666em;
+	--listsep: 0.75em;
+	--submetaSpacer: calc(1.5em + 12pt * 1.45);
+
+	/* gutters */
+	--sides-gutter: ;
+	--ends-gutter: ;
+
+	/*Seizenkennzeichung*/
+	--fs-seizenkennzeichung: var(--fs-small, 11pt);
+
+	/*barcode unten rechts hinten*/
+}
+
+*,
+*::before,
+*::after {
+	all: unset;
+	box-sizing: border-box;
+	overflow-wrap: break-word;
+	text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+body {
+	min-height: 100vh;
+}
+
+head,
+.hidden {
+	display: none;
+}
+
+table {
+	display: table;
+}
+
+tr {
+	display: table-row;
+}
+
+th,
+td {
+	display: table-cell;
+}
+
+thead {
+	display: table-header-group;
+}
+
+tbody {
+	display: table-row-group;
+}
+
+tfoot {
+	display: table-footer-group;
+}
+
+caption {
+	display: table-caption;
+}
+
+col {
+	display: table-column;
+}
+
+colgroup {
+	display: table-column-group;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		interpolate-size: allow-keywords;
+	}
+}
+
+img,
+picture,
+video,
+canvas,
+figure,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+textarea:not([rows]) {
+	min-height: 0; /*change later*/
+}
+
+:target {
+	scroll-margin-block: 5ex;
+}
