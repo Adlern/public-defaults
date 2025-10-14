@@ -1,7 +1,9 @@
-const text;
+/* load CSS */
+
+const text = "";
 
 async function loadText() {
-	const url = "https://raw.githubusercontent.com/Adlern/public-defaults/refs/heads/main/default.css";
+	const url = "https://raw.githubusercontent.com/Adlern/public-defaults/refs/heads/main/main.css";
 
 	const controller = new AbortController();
 	const timeout = setTimeout(() => controller.abort(), 10_000);
@@ -22,4 +24,8 @@ const sheet = new CSSStyleSheet();
 sheet.replaceSync(text);
 document.adoptedStyleSheets.push(sheet);
 
-alert("hi");
+/* prevent dc */
+
+document.ondblclick = function (e) {
+	e.preventDefault();
+}
