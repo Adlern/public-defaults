@@ -90,5 +90,12 @@
 	/*barcode unten rechts hinten*/
 
 	/*device sizes*/
-	--minimum: 320px;
+	--dw-min: 320px;
+	--dw-c-mobile-s: var(--dw-min);
+	--dw-c-mobile-m: 375px;
+	--dw-c-mobile-l: 425px;
+	--dw-c-tablet: 768px;
+	--dw-c-laptop: 1024px;
+	--dw-c-laptop-l: 1440px;
+	--dw-c-4k: 2560px;
 }
