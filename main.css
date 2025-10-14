@@ -1,28 +1,3 @@
 @import url(super-reset.css);
 @import url(variables.css);
 @import url();
-
-html {
-	height: 100svh;
-	display: flex;
-
-	body {
-		width: 100%;
-		min-height: var(--minimum_width);
-		min-width: var(--minimum_width);
-
-		#root {
-			display: flex;
-			flex-direction: column;
-
-			overflow: hidden;
-			min-height: 100%;
-		}
-	}
-}
-
-@media screen and (min-width: 320px) {
-	html {
-		justify-content: center;
-	}
-}

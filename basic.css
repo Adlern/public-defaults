@@ -1,0 +1,28 @@
+html {
+	height: 100svh;
+	display: flex;
+
+	body {
+		width: 100%;
+		min-height: var(--dw-min);
+		min-width: var(--dw-min);
+
+		#root {
+			display: flex;
+			flex-direction: column;
+
+			overflow: hidden;
+			min-height: 100%;
+		}
+	}
+}
+
+@media screen and (min-width: 320px) {
+	html {
+		justify-content: center;
+	}
+}
+
+abbr u,
+acronym u {
+}
