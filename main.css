@@ -109,6 +109,7 @@
 *::before,
 *::after {
 	all: unset;
+	display: revert;
 	box-sizing: border-box;
 	overflow-wrap: break-word;
 	text-wrap: pretty;
@@ -140,42 +141,7 @@ head,
 	display: none;
 }
 
-table {
-	display: table;
-}
 
-tr {
-	display: table-row;
-}
-
-th,
-td {
-	display: table-cell;
-}
-
-thead {
-	display: table-header-group;
-}
-
-tbody {
-	display: table-row-group;
-}
-
-tfoot {
-	display: table-footer-group;
-}
-
-caption {
-	display: table-caption;
-}
-
-col {
-	display: table-column;
-}
-
-colgroup {
-	display: table-column-group;
-}
 
 @media (prefers-reduced-motion: no-preference) {
 	html {
