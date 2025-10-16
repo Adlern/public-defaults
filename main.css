@@ -91,14 +91,14 @@
 	/*barcode unten rechts hinten*/
 
 	/*device sizes*/
-	--dw-min: 320px;
-	--dw-c-mobile-s: var(--dw-min);
-	--dw-c-mobile-m: 375px;
-	--dw-c-mobile-l: 425px;
-	--dw-c-tablet: 768px;
-	--dw-c-laptop: 1024px;
-	--dw-c-laptop-l: 1440px;
-	--dw-c-4k: 2560px;
+	--vpw-narrowest: 320px;
+	--vpw-c-mobile-s: var(--vpw-narrowest);
+	--vpw-c-mobile-m: 375px;
+	--vpw-c-mobile-l: 425px;
+	--vpw-c-tablet: 768px;
+	--vpw-c-laptop: 1024px;
+	--vpw-c-laptop-l: 1440px;
+	--vpw-c-4k: 2560px;
 }
 
 /* # SUPER RESET */
