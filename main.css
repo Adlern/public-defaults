@@ -209,8 +209,8 @@ html {
 
 	body {
 		width: 100%;
-		min-height: var(--dw-min);
-		min-width: var(--dw-min);
+		min-height: var(--vpw-narrowest);
+		min-width: var(--vpw-narrowest);
 
 		#root {
 			display: flex;
