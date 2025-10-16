@@ -224,3 +224,11 @@ i {
 strong {
 font-weight: 600;
 }
+
+.hidden {
+	display: none;
+}
+
+.spaceholder {
+visibility: none;
+}
