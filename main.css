@@ -125,6 +125,10 @@ h6 {
 	text-wrap: balance;
 }
 
+*:is(h1, h2, h3, h4)::first-letter {
+	text-transform: uppercase;
+}
+
 html {
 	-webkit-font-smoothing: antialiased;
 	-moz-text-size-adjust: none;
