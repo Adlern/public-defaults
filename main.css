@@ -113,6 +113,11 @@
 	box-sizing: border-box;
 	overflow-wrap: break-word;
 	text-wrap: pretty;
+		touch-action: pan-x pan-y;
+	user-select: none;
+		overscroll-behavior: none;
+
+
 }
 
 :heading,
@@ -176,6 +181,24 @@ textarea:not([rows]) {
 
 :target {
 	scroll-margin-block: 5ex;
+}
+
+a {
+	text-decoration: underline;
+	color: -webkit-link;
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-thickness: 0.07em;
+
+	&:active {
+		color: -webkit-activelink;
+	}
+}
+
+a,
+*[script="onclick()"],
+*[script="onMousedown()"] {
+	cursor: pointer;
 }
 
 
