@@ -1,6 +1,6 @@
 /* load CSS */
 (async () => {
-	const url = "https://raw.githubusercontent.com/Adlern/public-defaults/refs/heads/main/main.css";
+	const url = "https://cdn.jsdelivr.net/gh/Adlern/public-defaults/main.css";
 	try {
 		const res = await fetch(url, { cache: "no-cache", signal: AbortSignal.timeout(10_000) });
 		if (!res.ok) throw new Error(`HTTP ${res.status} – ${res.statusText}`);
