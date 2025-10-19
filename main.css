@@ -240,3 +240,7 @@ strong {
 .spaceholder {
 	visibility: none;
 }
+
+th[scope="rowgroup"], thead th:not([scope="rowgroup"]) {
+text-align: center;
+}
