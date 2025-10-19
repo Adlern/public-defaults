@@ -116,6 +116,8 @@
 	touch-action: pan-x pan-y;
 	user-select: none;
 	overscroll-behavior: none;
+		image-rendering: pixelated;
+
 }
 
 :heading,
