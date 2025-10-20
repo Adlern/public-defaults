@@ -115,10 +115,43 @@
 	text-wrap: pretty;
 	touch-action: pan-x pan-y;
 	user-select: none;
+	    -webkit-user-select: none;
+
 	overscroll-behavior: none;
 		image-rendering: pixelated;
+	-webkit-font-smoothing: antialiased;
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+		font-family: system-ui;
 
 }
+
+html,
+body {
+    overflow: auto;
+}
+
+
+body {
+    height: 100dvh;
+    min-width: var(--vpw-narrowest);
+    min-height: var(--vpw-narrowest);
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+@media (orientation: landscape) {
+    body {
+        height: 100lvh;
+        padding-bottom: calc((100lvh - 100dvh) + env(safe-area-inset-bottom));
+    }
+}
+
+
+
 
 :heading,
 h1,
@@ -132,13 +165,6 @@ h6 {
 
 *:is(h1, h2, h3, h4)::first-letter {
 	text-transform: uppercase;
-}
-
-html {
-	-webkit-font-smoothing: antialiased;
-	-moz-text-size-adjust: none;
-	-webkit-text-size-adjust: none;
-	text-size-adjust: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -191,31 +217,8 @@ a,
 }
 
 /* # BASIC*/
-html {
-	font-family: system-ui;
-	background-color: green;
-	overflow: auto;
-	height: 100%;
 
-	body {
-		background-color: rgb(255, 255, 255);
-		/*min-height: var(--vpw-narrowest);*/
-		min-width: var(--vpw-narrowest);
-		width: 100%;
-		overflow-x: hidden;
-		overflow-y: auto;
-		height: 100%;
-		max-height: 100svh;
-		border-top: 1px solid black;
-		border-bottom: 1px solid black;
-	}
-}
 
-@media screen and (min-width: 320px) {
-	html {
-		justify-content: center;
-	}
-}
 
 abbr u,
 acronym u {
