@@ -125,7 +125,14 @@
 	text-size-adjust: none;
 		font-family: system-ui;]
 	cursor: pointer;
+}
 
+a, button, input, textarea, radio, select {
+	cursor: unset;
+}
+
+img, svg {
+		pointer-events:none;
 
 }
 
