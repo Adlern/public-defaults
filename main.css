@@ -123,7 +123,9 @@
 	-moz-text-size-adjust: none;
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
-		font-family: system-ui;
+		font-family: system-ui;]
+	cursor: pointer;
+
 
 }
 
