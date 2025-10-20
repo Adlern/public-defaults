@@ -249,3 +249,31 @@ strong {
 th[scope="rowgroup"], thead th:not([scope="rowgroup"]) {
 text-align: center;
 }
+
+
+*:focus {
+    outline: 1px solid -webkit-focus-ring-color;
+}
+
+*:focus-visible {
+    outline: 2px solid -webkit-focus-ring-color;
+}
+
+*:visited {
+    color: #681da8;
+}
+
+*:active {}
+
+*:any-link:hover {
+    text-decoration: underline;
+}
+
+*:any-link {
+
+    color: #1a0dab;
+}
+
+*[data-scene="night"] a {
+    color: #99c3ff;
+}
