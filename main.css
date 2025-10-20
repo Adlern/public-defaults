@@ -136,28 +136,21 @@ img, svg {
 
 }
 
-html,
-body {
-    overflow: auto;
-}
+   html {
+            overflow: hidden;
+        }
 
+        body {
+            background-color: rgb(0, 255, 4);
+            height: 100dvh;
+            overflow: auto;
+			>*:only-child() {
+				    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 
-body {
-    height: 100dvh;
-    min-width: var(--vpw-narrowest);
+			    min-width: var(--vpw-narrowest);
     min-height: var(--vpw-narrowest);
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
-
-@media (orientation: landscape) {
-    body {
-        height: 100lvh;
-        padding-bottom: calc((100lvh - 100dvh) + env(safe-area-inset-bottom));
-    }
-}
+			}
+        }
 
 
 
