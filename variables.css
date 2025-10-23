@@ -27,12 +27,15 @@
 	/*	--textwidth-og: 390pt;*/
 	--paragraph-content-lh-accessibility: 1.5;
 
+	--beauty-gutter: 1rem;
+
 	/*text sizes*/
 	--tex-pt: calc(1 / 72.27in);
 
 	--min-x-height: 1.2ex;
 	--extra-min-x-height: 0.9ex;
-	--magstep: 1.2; /*minor third*/
+	--magstep: 1.2;
+	/*minor third*/
 	--halfstep: sqrt(var(--magstep));
 	--fs-tiny: 6pt;
 	--fs-min: var(--fs-tiy);
@@ -83,10 +86,14 @@
 	--backdrop: ;
 
 	/* line heights */
-	--lh-text: 1.2; /* like TeX’s ~1.2 for body text */
-	--lh-tight: 1.15; /* for mid headings */
-	--lh-tighter: 1.12; /* big headings */
-	--lh-tiniest: 1.1; /* tiny/scriptsize to avoid airy lines */
+	--lh-text: 1.2;
+	/* like TeX’s ~1.2 for body text */
+	--lh-tight: 1.15;
+	/* for mid headings */
+	--lh-tighter: 1.12;
+	/* big headings */
+	--lh-tiniest: 1.1;
+	/* tiny/scriptsize to avoid airy lines */
 
 	--listsep-alt: 0.1666em;
 	--listsep: 0.75em;

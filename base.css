@@ -22,5 +22,8 @@ body {
 
 header {
 	position: sticky;
-	top: 0;
+	height: 0;
+	top: var(--beauty-gutter);
 }
+
+/*scroll bars thin*/
