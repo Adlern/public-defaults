@@ -1,0 +1,64 @@
+a {
+	text-decoration: underline;
+	color: -webkit-link;
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-thickness: 0.07em;
+
+	&:active {
+		color: -webkit-activelink;
+	}
+}
+
+/* # BASIC*/
+abbr u,
+acronym u {
+}
+
+em {
+	font-style: italic;
+}
+
+i {
+	font-style: oblique;
+}
+
+strong {
+	font-weight: 600;
+}
+
+.hidden {
+	display: none;
+}
+
+.spaceholder {
+	visibility: none;
+}
+
+th[scope="rowgroup"],
+thead th:not([scope="rowgroup"]) {
+	text-align: center;
+}
+
+*:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+}
+
+*:focus-visible {
+	outline: 2px solid -webkit-focus-ring-color;
+}
+
+*:visited {
+	color: #681da8;
+}
+
+*:active {
+}
+
+*:any-link:hover {
+	text-decoration: underline;
+}
+
+*:any-link {
+	color: #1a0dab;
+}

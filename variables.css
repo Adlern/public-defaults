@@ -1,0 +1,110 @@
+:root {
+	/*optimal line lengths*/
+	--ll-print: 66ch;
+	--ll-screen: 55ch;
+	--ll-apporximation: 9.5cm;
+
+	/*physical dimensionss*/
+	--a4-long: 297mm;
+	--a4-short: 210mm;
+	--default-margin-int: 1in;
+	--default-margin: 2.5cm;
+	--cc-long: 3.375in;
+	--cc-short: 2.125in;
+	--cc-radius-min: 0.1125in;
+	--cc-radius-optimal: 0.125in;
+	--cc-radius-max: 0.1875in;
+	--index-card-long: 5in;
+	--index-card-short: 3in;
+	--visitenkarteUS-long: 3.5in;
+	--visitenkarteUS-short: 2in;
+	--visitenkarteEU-long: 85mm;
+	--visitenkarteEU-short: 55mm;
+	--portrait-h: 4.5cm;
+	--portrait-w: 3.5cm;
+	--unterschriftenfeld-min-länge: 75mm;
+	--unterschriftenfeld-min-höhe: 10mm;
+	/*	--textwidth-og: 390pt;*/
+	--paragraph-content-lh-accessibility: 1.5;
+
+	/*text sizes*/
+	--tex-pt: calc(1 / 72.27in);
+
+	--min-x-height: 1.2ex;
+	--extra-min-x-height: 0.9ex;
+	--magstep: 1.2; /*minor third*/
+	--halfstep: sqrt(var(--magstep));
+	--fs-tiny: 6pt;
+	--fs-min: var(--fs-tiy);
+	--fs-script: 8pt;
+	--fs-footnote: 10pt;
+	--fs-small: calc(var(--fs-normal) / var(--halfstep));
+	--fs-normal: 12pt;
+	--fs-normal-serif: var(--fs-normal);
+	--fs-normal-sans: 11pt;
+	--fs-large: calc(var(--fs-normal) * pow(var(--magstep), 1));
+	--fs-Large: calc(var(--fs-normal) * pow(var(--magstep), 2));
+	--fs-LARGE: calc(var(--fs-normal) * pow(var(--magstep), 3));
+	--fs-huge: calc(var(--fs-normal) * pow(var(--magstep), 4));
+	--fs-Huge: calc(var(--fs-normal) * pow(var(--magstep), 5));
+	--fs-title_h1: 2.2rem;
+	--fs-heading_h2: 1.5rem;
+	--fs-sub-heading_h3: 1.25rem;
+	--fs-sub-sub-heading_h4: 1.125rem;
+	--fs-handle_h5: 1.025rem;
+	--fs-sub-handle_h6: 1rem;
+	--h1size: 22pt;
+	--h2size: 19pt;
+	--h3size: 17.5pt;
+	--h4size: 14.5pt;
+	--h5size: 13pt;
+	--h6size: var(--fs-normal);
+	--fs-ers: 10pt;
+	--opacity-normal: 0.87;
+	--opacity-hint: 0.6;
+
+	--safety: 5mm;
+	--side-gutter: 2.5cm;
+	--side-edge: 2cm;
+	--ends: 1cm;
+
+	/* colors */
+	--bg: hsl(0, 0%, 95%);
+	--nm555: oklch(0.97 0.37 136);
+	--content: black;
+
+	--content-mild: hsl(0, 0%, 50%);
+	--day-content-mild: ;
+	--day-content: ;
+	--night-content-mild: hsl;
+	--night-content: ;
+	--night-backdrop: ;
+	--day-backdrop: ;
+	--backdrop: ;
+
+	/* line heights */
+	--lh-text: 1.2; /* like TeX’s ~1.2 for body text */
+	--lh-tight: 1.15; /* for mid headings */
+	--lh-tighter: 1.12; /* big headings */
+	--lh-tiniest: 1.1; /* tiny/scriptsize to avoid airy lines */
+
+	--listsep-alt: 0.1666em;
+	--listsep: 0.75em;
+	--submetaSpacer: calc(1.5em + 12pt * 1.45);
+
+	/*Seizenkennzeichung*/
+	--fs-seitenkennzeichung: var(--fs-small, 11pt);
+
+	/*barcode unten rechts hinten*/
+
+	/*device sizes*/
+	--vpw-narrowest: 320px;
+	--vpw-c-mobile-s: var(--vpw-narrowest);
+	--vpw-c-mobile-m: 375px;
+	--vpw-c-mobile-l: 425px;
+	--vpw-c-tablet: 768px;
+	--vpw-c-laptop: 1024px;
+	--vpw-c-laptop-l: 1440px;
+	--vpw-c-4k: 2560px;
+	--vpw-sweetspot: 980px;
+}

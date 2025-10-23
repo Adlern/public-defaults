@@ -1,0 +1,39 @@
+:heading,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+*:is(h1, h2, h3, h4)::first-letter {
+	text-transform: uppercase;
+}
+
+h1,
+h2 {
+	text-align: center;
+}
+
+h1 {
+	font-size: var(--fs-huge);
+}
+
+h2 {
+	font-size: var(--fs-LARGE);
+}
+
+h3 {
+	font-size: var(--fs-Large);
+}
+
+h4 {
+	font-size: var(--fs-large);
+}
+
+h5,
+h6 {
+	font-size: var(--fs-normal);
+}

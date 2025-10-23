@@ -1,0 +1,14 @@
+html {
+	overflow: hidden;
+}
+
+body {
+	height: 100dvh;
+	overflow: auto;
+	> *:only-child() {
+		padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+
+		min-width: var(--vpw-narrowest);
+		min-height: var(--vpw-narrowest);
+	}
+}

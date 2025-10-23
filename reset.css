@@ -1,0 +1,75 @@
+/* # SUPER RESET */
+/*https://gist.github.com/ambidexterich/34828a904dd97dd2a345*/
+
+*,
+*::before,
+*::after {
+	all: unset;
+	display: revert;
+	box-sizing: border-box;
+	overflow-wrap: break-word;
+	text-wrap: pretty;
+	touch-action: pan-x pan-y;
+	user-select: none;
+	-webkit-user-select: none;
+
+	overscroll-behavior: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+	font-family: system-ui;
+	cursor: pointer;
+}
+
+.qr,
+.barcode {
+	image-rendering: pixelated;
+}
+
+.url {
+	overflow-wrap: anywhere;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+	cursor: unset;
+}
+
+*[script="onclick()"],
+*[script="onMousedown()"] {
+	cursor: pointer;
+}
+
+img,
+svg {
+	pointer-events: none;
+}
+
+img,
+picture,
+video,
+canvas,
+figure,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+textarea:not([rows]) {
+	min-height: 0; /*change later*/
+}
+
+:target {
+	scroll-margin-block: 5ex;
+}

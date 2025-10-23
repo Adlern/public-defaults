@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        *,
+        *::after,
+        *::before {
+            all: unset;
+            display: revert;
+            box-sizing: border-box;
+            user-select: none;
+            -webkit-user-select: none;
+            overscroll-behavior: none;
+            touch-action: pan-x pan-y;
+        }
+
+        html {
+            background: rgb(255, 0, 0);
+            overflow: hidden;
+
+        }
+
+        body {
+            background-color: green;
+            /*height: calc(100lvh + 0.5px);*/
+        }
+
+
+        #screen {
+            background-color: blue;
+            position: absolute;
+            z-index: 1;
+            height: 811.844px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="screen">
+
+    </div>
+    <!-- <script>
+
+        const cssPixelsWide = screen.width; // CSS pixels of the device screen
+        const cssPixelsHigh = screen.height;
+        const diff = 0; /*cssPixelsHigh - document.documentElement.clientHeight;*/
+
+        const el = document.getElementById('screen');
+        el.style.width = cssPixelsWide + 'px';
+        el.style.height = cssPixelsHigh - diff + 'px';
+
+
+        const a = document.body;
+        a.style.width = cssPixelsWide + 'px';
+        a.style.height = cssPixelsHigh - diff + 'px';
+
+        const s = document.documentElement;
+        s.style.width = cssPixelsWide + 'px';
+        s.style.height = cssPixelsHigh - diff + 'px';
+
+    </script>
+
+
+    <script>/* Viewport height logger — paste into a <script> tag or your devtools console */
+        (() => {
+            const hasVV = "visualViewport" in window;
+
+            const supportsUnit = (u) =>
+                typeof CSS !== "undefined" &&
+                CSS.supports &&
+                CSS.supports("height", `100${u}`);
+
+            function measureUnit(u) {
+                if (!supportsUnit(u)) return "n/a";
+                const el = document.createElement("div");
+                el.style.cssText = `
+              position: absolute; top: 0; left: 0;
+              height: 100${u}; width: 0;
+              margin: 0; padding: 0; border: 0;
+              visibility: hidden; pointer-events: none;
+            `;
+                document.documentElement.appendChild(el);
+                const h = Math.round(el.getBoundingClientRect().height);
+                el.remove();
+                return h;
+            }
+
+            function log(label) {
+                const d = document.documentElement;
+                const b = document.body || d;
+
+                const metrics = {
+                    label,
+                    timestamp: new Date().toISOString(),
+
+                    /* Core window/doc heights (CSS px) */
+                    "window.innerHeight": Math.round(window.innerHeight),
+                    "documentElement.clientHeight": Math.round(d.clientHeight),
+                    "window.outerHeight": Math.round(window.outerHeight),
+
+                    /* Layout/document heights */
+                    "documentElement.scrollHeight": Math.round(d.scrollHeight),
+                    "body.scrollHeight": Math.round(b.scrollHeight),
+                    "documentElement.offsetHeight": Math.round(d.offsetHeight),
+
+                    /* Screen (device) heights */
+                    "screen.height": Math.round(screen.height),
+                    "screen.availHeight": Math.round(screen.availHeight),
+
+                    /* Visual viewport (mobile URL bar, pinch-zoom, IME) */
+                    "visualViewport.height": hasVV ? Math.round(window.visualViewport.height) : "n/a",
+
+                    /* CSS viewport units measured in px */
+                    "100vh (px)": measureUnit("vh"),
+                    "100dvh (px)": measureUnit("dvh"), // dynamic viewport height
+                    "100svh (px)": measureUnit("svh"), // small viewport height
+                    "100lvh (px)": measureUnit("lvh"), // large viewport height
+
+                    /* Misc */
+                    devicePixelRatio: window.devicePixelRatio,
+                };
+
+                console.groupCollapsed(`Viewport metrics — ${label}`);
+                console.table(metrics);
+
+                if (hasVV) {
+                    const vv = window.visualViewport;
+                    console.log("visualViewport details", {
+                        height: Math.round(vv.height),
+                        width: Math.round(vv.width),
+                        pageTop: Math.round(vv.pageTop),
+                        pageLeft: Math.round(vv.pageLeft),
+                        offsetTop: Math.round(vv.offsetTop),
+                        offsetLeft: Math.round(vv.offsetLeft),
+                        scale: vv.scale,
+                    });
+                }
+
+                console.groupEnd();
+            }
+
+            // Throttle logs during rapid resize/scroll
+            let scheduled = false;
+            function schedule(label) {
+                if (scheduled) return;
+                scheduled = true;
+                requestAnimationFrame(() => {
+                    scheduled = false;
+                    log(label);
+                });
+            }
+
+            // Initial logs
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", () => log("DOMContentLoaded"));
+                window.addEventListener("load", () => log("load"));
+            } else {
+                log("initial");
+            }
+
+            // Update logs on changes that affect viewport height
+            window.addEventListener("resize", () => schedule("resize"));
+            window.addEventListener("orientationchange", () => schedule("orientationchange"));
+            if (hasVV) {
+                window.visualViewport.addEventListener("resize", () => schedule("visualViewport.resize"));
+                window.visualViewport.addEventListener("scroll", () => schedule("visualViewport.scroll"));
+            }
+        })();
+    </script>
+    -->
+</body>
+
+</html>

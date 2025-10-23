@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        *,
+        *::after,
+        *::before {
+            all: unset;
+            display: revert;
+            box-sizing: border-box;
+            user-select: none;
+            overscroll-behavior: none;
+            -webkit-user-select: none;
+            touch-action: pan-x pan-y;
+        }
+
+        html {
+            overflow: hidden;
+            background-color: rgb(255, 0, 0);
+            touch-action: none;
+        }
+
+
+
+        body {
+            background-color: rgb(0, 255, 4);
+            height: 100dvh;
+            overflow: auto;
+        }
+
+        #content {
+            border: 5px dashed red;
+            height: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+
+    </div>
+
+
+    <script>
+        (() => {
+            // Das Element mit overflow (hier: <body>) und dein eigentlicher Inhalt
+            const scroller = document.body;
+            const content = document.getElementById('content');
+
+            // Toggelt overflow abhängig davon, ob gescrollt werden *könnte*
+            function updateOverflow() {
+                // Body ist 100dvh hoch -> clientHeight ~ Sichtfensterhöhe
+                const viewportH = scroller.clientHeight;
+                // „Auto würde scrollen“, wenn content höher ist als das Sichtfenster
+                const needsScroll = content && content.scrollHeight > viewportH + 0.5; // +0.5 gegen Rundungsfehler
+                scroller.style.overflow = needsScroll ? 'auto' : 'hidden';
+            }
+
+            // Reagiere auf Größenänderungen
+            window.addEventListener('load', updateOverflow);
+            window.addEventListener('resize', () => requestAnimationFrame(updateOverflow));
+
+            // Wenn sich #content in der Größe ändert (z.B. dynamisch geladen)
+            if (window.ResizeObserver && content) {
+                new ResizeObserver(() => requestAnimationFrame(updateOverflow)).observe(content);
+            } else {
+                // Fallback: DOM-Änderungen beobachten
+                new MutationObserver(() => requestAnimationFrame(updateOverflow)).observe(
+                    content || document.body,
+                    { childList: true, subtree: true, attributes: true, characterData: true }
+                );
+            }
+
+            // Initial einmal nach dem ersten Layout prüfen
+            requestAnimationFrame(updateOverflow);
+        })();
+    </script>
+
+
+</body>
+
+</html>
