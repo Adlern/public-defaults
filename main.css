@@ -275,6 +275,10 @@ text-align: center;
     color: #1a0dab;
 }
 
-*[data-scene="night"] a {
+*[data-scene="night"] {
+color: white;
+	
+a {
     color: #99c3ff;
+}
 }
