@@ -19,7 +19,8 @@
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
 	font-family: system-ui;
-	cursor: pointer;
+	print-color-adjust: exact;
+	/*cursor*/
 }
 
 .qr,
