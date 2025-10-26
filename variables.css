@@ -7,8 +7,8 @@
 	/*physical dimensionss*/
 	--a4-long: 297mm;
 	--a4-short: 210mm;
-	--default-margin-int: 1in;
-	--default-margin: 2.5cm;
+	--default-margin: 1in;
+	--default-margin-small: .5in;
 	--cc-long: 3.375in;
 	--cc-short: 2.125in;
 	--cc-radius-min: 0.1125in;
