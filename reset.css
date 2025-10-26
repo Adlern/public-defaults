@@ -26,7 +26,8 @@
 .qr,
 .barcode {
 	image-rendering: pixelated;
-	shape-rendering: crispEdges
+	shape-rendering: crispEdges;
+	/*image-resolution: from-image 300dpi;??*/
 }
 
 .url {
