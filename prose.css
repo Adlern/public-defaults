@@ -63,6 +63,6 @@ thead th:not([scope="rowgroup"]) {
 	color: #1a0dab;
 }
 
-p {
+p, ul, ol, li {
 	  orphans: 2;
 }
