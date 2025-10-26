@@ -62,3 +62,7 @@ thead th:not([scope="rowgroup"]) {
 *:any-link {
 	color: #1a0dab;
 }
+
+p {
+	  orphans: 2;
+}
